@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     performance: {
@@ -123,6 +124,30 @@ module.exports = {
             filename: 'css/[name].css',
             chunkFilename: 'css/[id][chunkhash:8].css',//异步加载的样式文件命名
             ignoreOrder: true //禁止顺序检查
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, '../assets/plug/bootstrap-3.2.0-dist/css/bootstrap.min.css'),
+                    to: path.resolve(__dirname, '../dist'),
+                },
+                {
+                    from: path.resolve(__dirname, '../assets/plug/Font-Awesome-4.7.0/css/font-awesome.min.css'),
+                    to: path.resolve(__dirname, '../dist'),
+                },
+                {
+                    from: path.resolve(__dirname, '../assets/plug/bootstrap-3.2.0-dist/js/bootstrap.min.js'),
+                    to: path.resolve(__dirname, '../dist'),
+                },
+                {
+                    from: path.resolve(__dirname, '../assets/plug/jquery-1.11.1.js'),
+                    to: path.resolve(__dirname, '../dist'),
+                },
+                {
+                    from: path.resolve(__dirname, '../assets/plug/jquery-1.8.3.min.js'),
+                    to: path.resolve(__dirname, '../dist'),
+                },
+            ]
         }),
     ]
 }

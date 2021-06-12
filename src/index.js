@@ -6,7 +6,7 @@ import createSagaMiddleware from 'redux-saga'
 import rootSaga from './model'
 import { Provider } from 'react-redux'
 import App from './router'
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import '@/assets/css/main.css'
 
 const sagaMiddleware = createSagaMiddleware() // 创建中间件
 const store = createStore(
