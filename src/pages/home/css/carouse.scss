@@ -1,0 +1,26 @@
+#leftimg{
+    .item{
+        width: 100%;
+        position: relative;
+        .carousel-caption {
+            position: absolute;
+            width: 100%;
+            left: auto;
+            right: auto;
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+            bottom: 0px;
+            height: 70px;
+            background-color: rgb(0, 0, 0, 0.5);
+            text-align: center;
+            p{
+                font-size: 18px;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#rightlist{
+
+}

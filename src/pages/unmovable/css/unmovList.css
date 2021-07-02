@@ -1,0 +1,133 @@
+body {
+	background-color: #f7f7f7;
+}
+
+p p#knowmore {
+	text-align: right;
+}
+
+p#knowmore a {
+	background-color: #C63838;
+}
+
+p#knowmore a:hover {
+	background-color: #a62828;
+}
+
+p.countp {
+	font-size: 16px;
+	font-family: '微软雅黑';
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+span#count {
+	color: #C63838;
+	font-weight: bold;
+}
+
+strong#unmovname {
+	/* color: #05AEC7; */
+	display: block;
+	/*只有块元素和行内块元素才能设置隐藏*/
+	white-space: nowrap;
+	/*设置不换行*/
+	overflow: hidden;
+	/*设置隐藏*/
+	text-overflow: ellipsis;
+	/*设置隐藏部分为省略号*/
+	width: 90%;
+	margin-top: 0px;
+
+}
+
+li.selected {
+	background-color: #d5d5d5 !important;
+	/* color: #3884c3 !important; */
+}
+
+.products-leul li:not(:first-child):hover {
+	/*选择除了第一个(标题)以外的孩子*/
+	background-color: #eeeeee;
+	transition: all 0.45s;
+}
+
+li.selected>a {
+	color: #C63838 !important;
+}
+
+.products-leul a:hover {
+	color: #C63838 !important;
+}
+
+/* li#第一批>a{
+	font-size: 20px !important;
+} */
+button#piciselect {
+	width: 100%;
+}
+
+ul.dropdown-menu.piciselect {
+	width: 100%;
+}
+
+nav.turnpage {
+	text-align: center;
+}
+
+.dropdown {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+span#tittle {
+	font-size: 17px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+
+.products-yemian .products-leul {
+	background: white;
+	box-shadow: 5px 5px 6px -2px #cccccc;
+}
+
+.itemdiv {
+	margin-bottom: 20px;
+}
+
+.itemcontainer {
+	background-color: white;
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 1px lightgray solid;
+	border-radius: 5px;
+}
+
+.itemcontainer:hover {
+	box-shadow: 5px 5px 6px -2px #cccccc;
+	transition: all 0.6s;
+
+}
+
+
+.imgcontainer {
+	margin: 10px;
+	overflow: hidden;
+}
+
+p.level {
+	color: darkgray;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+h2.default {
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	margin: 20px auto 15px auto;
+	font-family: "微软雅黑";
+	color: grey;
+}

@@ -1,22 +1,22 @@
 import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Home from './pages/home'
-// import SetAccount from './pages/setAccount'
-// import ManageBar from './pages/manageBar'
-// import Login from './pages/login'
-// import Register from './pages/register'
-// import PublicLayout from './component/layout'
+import PublicLayout from '@/src/component/layout'
+import Unmovable from './pages/unmovable'
+import Movable from './pages/movable'
+import Area from './pages/area'
+import NewsList from './pages/newsList'
 
 const proRouter = () => {
     return (
-        <Router>
+        <>
             <Route exact path='/' component={Home} />
-            {/* <Route exact path='/setSubAccount' component={SetAccount} />
-            <Route exact path='/manageBar' component={ManageBar} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/register' component={Register} /> */}
-        </Router>
+            <Route exact path='/unmovable' component={Unmovable} />
+            <Route exact path='/movable' component={Movable} />
+            <Route exact path='/area' component={Area} />
+            <Route exact path='/newsList' component={NewsList} />
+        </>
     )
 }
 
-export default proRouter
+export default PublicLayout(proRouter)

@@ -2,15 +2,23 @@ export default {
     routers: [
         {
             router: '/',
-            name: '总览'
+            name: '首页'
         },
         {
-            router: '/setSubAccount',
-            name: '子账号管理'
+            router: '/unmovable',
+            name: '不可移动革命文物'
         },
         {
-            router: '/manageBar',
-            name: '网吧管理'
-        }
+            router: '/movable',
+            name: '可移动文物'
+        },
+        {
+            router: '/area',
+            name: '革命片区'
+        },
+        {
+            router: '/newsList',
+            name: '通知动态'
+        },
     ]
 }
