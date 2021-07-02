@@ -1,6 +1,8 @@
-let host = 'http://api.ewawa.cn'
+// let host = 'http://gm.ncha.gov.cn/je'
+let host = 'http://localhost:8080/je'
+let assetsUrl = '/je/api/readImg?filePath='
 
 export default {
-    //header
-   test:'/api/test'
+    //home
+   baseUrl:`${host}/api/load`
 }

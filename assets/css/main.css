@@ -142,7 +142,7 @@ a:hover {
 }
 
 .floatDivBoxs ul, ol {
-    list-style: none;++++
+    list-style: none;
 }
 
 .floatDivBoxs img {
@@ -887,7 +887,7 @@ footer .footer-button {
 .newsye ul li a {
     display: block;
     padding: 10px 21px;
-    color: #808080;v
+    color: #808080;
     font-size: 16px;
     border-bottom: #eee solid 1px;
 }

@@ -1,0 +1,53 @@
+.unmovableMap {
+	/* border: #000000 2px solid; */
+}
+
+#dituContent {
+	width: auto;
+	margin-left: 10px;
+}
+
+.unmovableMap .panel .panel-heading {
+	background-color: #c63838;
+	color: white;
+}
+
+.unmovableMap .list-group a.active {
+	background-color: #f2dede;
+	color: #c63838;
+	border-color: #f2dede;
+}
+
+.unmovableMap .list-group a {
+	cursor: pointer;
+}
+
+.input-group {
+	position: absolute;
+	width: 350px;
+	right: 15%;
+	top: -39px;
+	display: flex;
+	flex-direction: row;
+}
+
+li.selected {
+	background-color:  #C0C0C0;
+}
+li.selected a {
+	color: #C63838;
+}
+
+.dropdown-menu>li>a:hover {
+   text-decoration: none;
+   background-color: #E2E2E2;
+	 transition: all 0.45s;
+}
+
+ul.dropdown-menu{
+	overflow-y: visible;
+}
+
+button#dropdownMenu1 {
+    width: 100px;
+}

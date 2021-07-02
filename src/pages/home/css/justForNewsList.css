@@ -1,0 +1,124 @@
+.newsList .row {
+	/* border: 2px #d5d5d5 solid; */
+	/* border-radius: 5px; */
+	/* position: relative; */
+}
+
+#leftimg {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#leftimg .carousel-inner .item img {
+	width: 100%;
+}
+
+#rtight-inner {
+	/* padding-left: 0px; */
+	/* background-color: #f1c9cc; */
+	overflow: hidden;
+}
+
+#rightlist h2 {
+	margin: 10px 10px 0 10px;
+	font-size: 18px;
+	font-family: 微软雅黑;
+	font-weight: bolder;
+	color: #C63838;
+	text-align: left;
+	border-left: 7px solid #882229;
+	padding-left: 10px;
+	padding-bottom: 2px;
+}
+
+#rightlist{
+	background-color: #fff;
+}
+
+#rightlist ul {
+	padding-left: 0px;
+	background-color: white;
+	margin: 10px 10px 10px 10px;
+
+	list-style: none;
+	/* counter-reset: count; */
+
+}
+
+/* #rightlist ul li:before {
+	content: "● ";
+	color: #C63838;
+} */
+
+#rightlist ul li {
+	text-indent: 10px;
+
+	height: 35px;
+	border-bottom: 1px dashed #e5e5e5;
+	line-height: 35px;
+	/* text-align: left; */
+	/* list-style-type: disc; */
+
+}
+
+/* #rightlist ul li:nth-child(odd){background:#F4F4F4;} */
+#rightlist ul li a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 70%;
+	text-decoration: none;
+	/* float: left; */
+	color: #000000;
+	white-space: nowrap;
+	/*设置不换行*/
+	overflow: hidden;
+	/*设置隐藏*/
+	text-overflow: ellipsis;
+	/*设置隐藏部分为省略号*/
+	display: inline-block;
+}
+@media (max-width: 720px){
+
+	#rightlist ul li a{
+		width: 50%;
+	}
+	
+}
+/*  text-decoration:none; */
+#rightlist ul li a:visited {
+	text-decoration: none;
+}
+
+#rightlist ul li a:hover {
+	color: #C63838;
+}
+
+#rightlist ul li span {
+	font-size: 16px;
+	float: right;
+	color: #a5a5a5;
+	margin-right: 15px;
+}
+
+.carousel-caption p {
+	font-size: 18px;
+	/* background-color: rgb(0, 0, 0, 0.5); */
+	/* display: block; */
+	margin: 0px;
+	/* height: 70px; */
+	/* line-height: 70px; */
+}
+
+.carousel-caption {
+	width: 100%;
+	left: auto;
+	right: auto;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	bottom: 0px;
+	height: 70px;
+	background-color: rgb(0, 0, 0, 0.5);
+	text-align: center;
+}
+

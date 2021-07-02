@@ -24,7 +24,7 @@ module.exports = {
     // },
     entry: './src/index.js',
     output: {
-        filename: '[name][chunkhash:8].js',
+        filename: '[name][hash:8].js',
         path: path.resolve(__dirname, '../dist')
     },
     resolve: {
@@ -43,6 +43,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(sc|c)ss$/,
+                exclude: path.resolve(__dirname, '../plug'),
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
@@ -65,7 +66,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 8 * 1024,
-                        name: 'img/[name][chunkhash:8].[ext]',
+                        name: 'img/[name][hash:8].[ext]',
                     }
                 }]
             },
@@ -108,7 +109,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({
             //打包前删除一次文件
-            cleanOnceBeforeBuildPatterns: ['js', 'css', 'img', 'fonts', '*.txt', '*.html', '*.js', '*.css', '*.ico'],
+            cleanOnceBeforeBuildPatterns: ['js', 'css', 'img', 'fonts', '*.txt', '*.html', '*.js', '*.css', '*.ico','plug'],
             cleanAfterEveryBuildPatterns: ['*.txt']
         }),
         new HtmlWebpackPlugin({
@@ -122,30 +123,18 @@ module.exports = {
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
-            chunkFilename: 'css/[id][chunkhash:8].css',//异步加载的样式文件命名
+            chunkFilename: 'css/[id][hash:8].css',//异步加载的样式文件命名
             ignoreOrder: true //禁止顺序检查
         }),
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, '../assets/plug/bootstrap-3.2.0-dist/css/bootstrap.min.css'),
-                    to: path.resolve(__dirname, '../dist'),
+                    from: path.resolve(__dirname, '../plug/'),
+                    to: path.resolve(__dirname, '../dist/plug'),
                 },
                 {
-                    from: path.resolve(__dirname, '../assets/plug/Font-Awesome-4.7.0/css/font-awesome.min.css'),
-                    to: path.resolve(__dirname, '../dist'),
-                },
-                {
-                    from: path.resolve(__dirname, '../assets/plug/bootstrap-3.2.0-dist/js/bootstrap.min.js'),
-                    to: path.resolve(__dirname, '../dist'),
-                },
-                {
-                    from: path.resolve(__dirname, '../assets/plug/jquery-1.11.1.js'),
-                    to: path.resolve(__dirname, '../dist'),
-                },
-                {
-                    from: path.resolve(__dirname, '../assets/plug/jquery-1.8.3.min.js'),
-                    to: path.resolve(__dirname, '../dist'),
+                    from: path.resolve(__dirname, '../js/'),
+                    to: path.resolve(__dirname, '../dist/js'),
                 },
             ]
         }),

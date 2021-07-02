@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import gemingfont from './images/geming-font.png'
 import biglogo from './images/biglogo.png'
 import logowenwuju from './images/logo_wenwuju.png'
-import './index.scss'
 
 const Header = props => {
     return (
@@ -29,7 +28,7 @@ const Header = props => {
                             <span className="icon-bar"></span>
                         </button>
                         <p id="zyglpt">资源管理平台(试运行)</p>
-                        <img className="logo" src={logowenwuju} alt="" />
+                        <img className="logo" src={logowenwuju} alt="" style={{ display: 'none' }} />
                         <div className="input-group" style={{ display: 'none' }}>
                             <input type="text" className="form-control" placeholder="不可移动文物..." />
                             <div className="dropdown">
@@ -48,11 +47,11 @@ const Header = props => {
                     </div>
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a className="active" href="#">首页</a></li>
-                            <li><a href="unmovable.html">不可移动革命文物</a></li>
-                            <li><a href="antique.html">可移动文物</a></li>
-                            <li><a href="pianqu.html">革命片区</a></li>
-                            <li><a href="newsList.html">通知动态</a></li>
+                            <li><a className={props.location.pathname == '/'?'active':''} onClick={() => { props.history.push('/') }}>首页</a></li>
+                            <li><a className={props.location.pathname == '/unmovable' ? 'active' : ''} onClick={() => { props.history.push('/unmovable') }} >不可移动革命文物</a></li>
+                            <li><a className={props.location.pathname == '/movable' ? 'active' : ''} onClick={() => { props.history.push('/movable') }} >可移动文物</a></li>
+                            <li><a className={props.location.pathname == '/area' ? 'active' : ''} onClick={() => { props.history.push('/area') }} >革命片区</a></li>
+                            <li><a className={props.location.pathname == '/newsList' ? 'active' : ''} onClick={() => { props.history.push('/newsList') }} >通知动态</a></li>
                         </ul>
                     </div>
                 </div>
