@@ -22,3 +22,25 @@ export const getNotice = params => {
         }
     })
 }
+
+export const getMoveable = params => {
+    return axios.get(Api.baseUrl, {
+        params: {
+            ...params,
+            tableCode: 'GM_V_KYD',
+            whereSql: `and KYDWW_TP is not null and KYDWW_TP  != ''`,
+            orderSql: ''
+        }
+    })
+}
+
+export const getUnmoveable = params => {
+    return axios.get(Api.baseUrl, {
+        params: {
+            ...params,
+            tableCode: 'GM_V_BKYDWBDW',
+            whereSql: `and ZP_FJ is not null and ZP_FJ  != ''`,
+            orderSql: ''
+        }
+    })
+}

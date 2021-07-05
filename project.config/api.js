@@ -4,5 +4,5 @@ let assetsUrl = '/je/api/readImg?filePath='
 
 export default {
     //home
-   baseUrl:`${host}/api/load`
+   baseUrl:`${host}/api/load`,
 }

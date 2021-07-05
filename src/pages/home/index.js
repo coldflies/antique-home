@@ -2,6 +2,9 @@ import React, { useEffect } from 'react'
 import Header from '@/src/component/header'
 import { connect } from 'react-redux'
 import Carouse from './component/carouse'
+import Notices from './component/notices'
+import Moveable from './component/moveable'
+import Unmoveable from './component/unmoveable'
 import './css/gmww.css'
 import './css/justForNewsList.css'
 
@@ -17,11 +20,27 @@ const Home = props => {
             }
         })
         props.dispatch({
-            type:'getNotice',
-            payload:{
+            type: 'getNotice',
+            payload: {
                 page: 1,
                 start: 0,
                 limit: 8
+            }
+        })
+        props.dispatch({
+            type: 'getMoveable',
+            payload: {
+                page: 1,
+                start: 0,
+                limit: 4
+            }
+        })
+        props.dispatch({
+            type: 'getUnmoveable',
+            payload: {
+                page: 1,
+                start: 0,
+                limit: 4
             }
         })
     }
@@ -35,55 +54,15 @@ const Home = props => {
             <div className="newsList">
                 <div className="container">
                     <div className="row">
-
                         <div id="leftimg" className="col-md-5 col-xs-12">
                             <Carouse {...props} />
                         </div>
-
                         <div id="rightlist" className="col-md-7 col-xs-12">
                             <div id="rtight-inner">
                                 <a href="newsList.html" className="more" style={{ color: '#dc7880', top: '3%', right: '4%' }} >更多<i className="fa fa-angle-right"></i></a>
-                                <h2>通知动态</h2>
-                                <ul>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.baidu.com">加载中...</a>
-                                        <span>2018-02-05</span>
-                                    </li>
-                                </ul>
+                                <Notices {...props} />
                             </div>
-
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -117,16 +96,16 @@ const Home = props => {
             <div className="join collectionList container">
                 <a href="movable.html" className="more">更多<i className="fa fa-angle-right"></i></a>
                 <div className="row foundCollectionList">
-                    <h5><a href="unmovable.html"></a></h5>
-
+                    <h5><a href="unmovable.html">可移动文物</a></h5>
+                    <Moveable {...props} />
                 </div>
             </div>
 
             <div className="join unmovableList container">
                 <a href="unmovable.html" className="more">更多<i className="fa fa-angle-right"></i></a>
                 <div className="row foundUnmovableList">
-                    <h5><a href="unmovable.html"></a></h5>
-
+                    <h5><a href="unmovable.html">不可移动文物</a></h5>
+                    <Unmoveable {...props} />
                 </div>
             </div>
         </>

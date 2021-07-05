@@ -21,9 +21,31 @@ function* getNotice({ payload }) {
     })
 }
 
+function* getMoveable({ payload }) {
+    const result = yield call(services.getMoveable, payload)
+    yield put({
+        type: 'success',
+        payload: {
+            getMoveable: result
+        }
+    })
+}
+
+function* getUnmoveable({payload}){
+    const result = yield call(services.getUnmoveable,payload)
+    yield put({
+        type:'success',
+        payload:{
+            getUnmoveable:result
+        }
+    })
+}
+
 function* homeSaga() {
     yield takeEvery('getImgs', getImgs)
-    yield takeEvery('getNotice',getNotice)
+    yield takeEvery('getNotice', getNotice)
+    yield takeEvery('getMoveable', getMoveable)
+    yield takeEvery('getUnmoveable',getUnmoveable)
 }
 
 export default homeSaga
