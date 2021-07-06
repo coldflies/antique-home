@@ -59,7 +59,7 @@ const Home = props => {
                         </div>
                         <div id="rightlist" className="col-md-7 col-xs-12">
                             <div id="rtight-inner">
-                                <a href="newsList.html" className="more" style={{ color: '#dc7880', top: '3%', right: '4%' }} >更多<i className="fa fa-angle-right"></i></a>
+                                <a className="more" style={{ color: '#dc7880', top: '3%', right: '4%' }} >更多<i className="fa fa-angle-right"></i></a>
                                 <Notices {...props} />
                             </div>
                         </div>
@@ -96,7 +96,7 @@ const Home = props => {
             <div className="join collectionList container">
                 <a href="movable.html" className="more">更多<i className="fa fa-angle-right"></i></a>
                 <div className="row foundCollectionList">
-                    <h5><a href="unmovable.html">可移动文物</a></h5>
+                    <h5><a >可移动文物</a></h5>
                     <Moveable {...props} />
                 </div>
             </div>
@@ -104,7 +104,7 @@ const Home = props => {
             <div className="join unmovableList container">
                 <a href="unmovable.html" className="more">更多<i className="fa fa-angle-right"></i></a>
                 <div className="row foundUnmovableList">
-                    <h5><a href="unmovable.html">不可移动文物</a></h5>
+                    <h5><a >不可移动文物</a></h5>
                     <Unmoveable {...props} />
                 </div>
             </div>
