@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Carousel } from 'antd'
-import '../css/carouse.scss'
 
 const carousel = props => {
     const [data, setData] = useState([])

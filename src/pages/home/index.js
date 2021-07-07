@@ -6,7 +6,7 @@ import Notices from './component/notices'
 import Moveable from './component/moveable'
 import Unmoveable from './component/unmoveable'
 import './css/gmww.css'
-import './css/justForNewsList.css'
+import './css/index.scss'
 
 const Home = props => {
     //获取数据
@@ -66,8 +66,6 @@ const Home = props => {
                     </div>
                 </div>
             </div>
-
-
 
             <div className="join unmovableMap container">
                 <div className="col-md-3 col-xs-12">
